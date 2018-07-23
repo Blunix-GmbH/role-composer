@@ -1,0 +1,13 @@
+---
+- name: Converge
+  hosts: all
+  become: yes
+  vars:
+    php_enabled: yes
+    php_version: 7.2
+
+    composer_testing: yes
+
+  roles:
+    - role: blunix.role-php
+    - role: role-composer

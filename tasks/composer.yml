@@ -1,0 +1,9 @@
+- name: Including distro-specific installer tasks
+  include_tasks: "{{ composer_install_item }}"
+  with_first_found:
+    - install/{{ ansible_distribution }}.{{ ansible_lsb.codename }}.yml
+    - install/{{ ansible_distribution }}.yml
+    - install/default.yml
+  loop_control:
+    loop_var: composer_install_item
+  tags: install

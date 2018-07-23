@@ -1,0 +1,14 @@
+galaxy_info:
+  author: Brian Wiborg
+  description: This role installs PHP's composer from upstream.
+  company: Blunix GmbH
+  license: Apache-2.0
+  min_ansible_version: 2.6
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - 16.04
+        - xenial
+
+dependencies: []

@@ -1,0 +1,4 @@
+- name: blunix.role-php
+  src: https://github.com/blunix/role-php
+  version: 1.0.7
+  scm: git
