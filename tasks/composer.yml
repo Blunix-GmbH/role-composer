@@ -7,3 +7,13 @@
   loop_control:
     loop_var: composer_install_item
   tags: install
+
+- name: Including distro-specific configure tasks
+  include_tasks: "{{ composer_configure_item }}"
+  with_first_found:
+    - configure/{{ ansible_distribution }}.{{ ansible_lsb.codename }}.yml
+    - configure/{{ ansible_distribution }}.yml
+    - configure/default.yml
+  loop_control:
+    loop_var: composer_configure_item
+  tags: configure

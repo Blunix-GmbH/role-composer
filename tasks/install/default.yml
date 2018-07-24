@@ -1,18 +1,8 @@
-- name: Downloading composer-setup.php
+- name: Downloading composer.phar
   get_url:
-    url: "https://getcomposer.org/installer"
-    dest: "/composer-setup.php"
+    url: "https://getcomposer.org/download/{{ composer_version }}/composer.phar"
+    dest: "/usr/local/bin/composer"
     checksum: "{{ composer_checksum | default(None) }}"
     owner: root
     group: root
     mode: 0755
-
-- name: Installing composer-{{ composer_version }}
-  shell: php /composer-setup.php --quiet --version={{ composer_version }}
-  changed_when: no
-
-- name: Removing composer-setup.php
-  when: composer_testing is not defined or not composer_testing
-  file:
-    path: ~/composer-setup.php
-    state: absent

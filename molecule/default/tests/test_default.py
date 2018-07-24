@@ -9,7 +9,7 @@ COMPOSER_VERSION = '1.6.5'
 
 
 def test_composer(host):
-    cmd = host.run('php composer.phar')
+    cmd = host.run('composer')
 
     assert cmd.rc == 0
 
