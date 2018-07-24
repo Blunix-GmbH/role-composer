@@ -1,0 +1,9 @@
+- name: Configuring Composer's cache folder
+  become: yes
+  become_user: "{{ composer_user }}"
+  composer:
+    command: config
+    global_command: yes
+    working_dir: "{{ composer_app_path }}"
+    arguments: cache-dir {{ composer_cache_dir }}
+  changed_when: no  # idempotence fails
