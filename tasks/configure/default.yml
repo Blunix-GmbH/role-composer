@@ -1,6 +1,8 @@
 - name: Configuring Composer's cache folder
+  when: deployment_stage is defined and deployment_stage == 'vagrant'
   become: yes
-  become_user: "{{ composer_user }}"
+  become_flags: "-iu {{ composer_user }}"  # otherwise Composer tries writing to /root
+  become_method: enable  # https://docs.ansible.com/ansible/latest/user_guide/become.html#become-and-networks
   composer:
     command: config
     global_command: yes
