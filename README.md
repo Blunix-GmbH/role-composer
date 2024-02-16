@@ -1,35 +1,31 @@
-# Role Composer
+# blunix.role-composer
+This Ansible role installs and configures composer.
 
-Installs PHP's composer.
+This role is part of the Blunix hosting stack. Documentation is available at <a href="https://www.blunix.com/manual" target="_blank">https://www.blunix.com/manual</a>.
 
-# Example Playbook
 
-```yaml
-- hosts: all
-  vars:
-    composer_version: 1.6.5
-    composer_checksum: sha384:544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061
-    
-  roles:
-    - role: blunix.role-composer
+# Mirror to github
+This repository is mirrored from <a href="https://git.blunix.com/ansible-roles/" target="_blank">https://git.blunix.com/ansible-roles/</a> to github.com/Blunix-GmbH/.
 
+
+# Author Information
+Blunix GmbH
+
+`root@linux:~# Consulting | Hosting | Training`
+
+Blunix GmbH provides 24/7/365 Linux emergency consulting and support, Service Level Agreements for Debian Linux managed hosting using Ansible Configuration Management as well as Linux trainings and workshops.
+
+```
+Blunix GmbH
+Glogauer Straße 21
+10999 Berlin
+Germany
+
+Website: https://www.blunix.com
+Contact: https://www.blunix.com#contact
 ```
 
 # License
-
 Apache-2.0
 
-# Author Information
-
-Service and support for orchestrated hosting environments,
-continuous integration/deployment/delivery and various Linux
-and open-source technology stacks are available from:
-
-```
-Blunix GmbH - Consulting for Linux Hosting 24/7
-Glogauer Straße 21
-10999 Berlin - Germany
-
-Web: www.blunix.org
-Email: service[at]blunix.org
-Phone: (+49) 30 / 12 08 39 90
+Please refer to the LICENSE file in the root of this repository.
